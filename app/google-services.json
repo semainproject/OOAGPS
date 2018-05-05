@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "530986220151",
+    "firebase_url": "https://ooap-6e1e1.firebaseio.com",
+    "project_id": "ooap-6e1e1",
+    "storage_bucket": "ooap-6e1e1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:530986220151:android:3d29fc9c788502c7",
+        "android_client_info": {
+          "package_name": "com.example.kittaporn.ooagps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "530986220151-dkdgbmbmr23fnj9neqrqnita05ec39ib.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.kittaporn.ooagps",
+            "certificate_hash": "0fe7bf16b4592c0e1c51c8ff3b6c26be9a6c04a5"
+          }
+        },
+        {
+          "client_id": "530986220151-pfdvb2baofgnu9vvv2mmtu1r79r5a2dk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7-LgtztgEtzQs1cfJmB2Gjv0EcKwzvBg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "530986220151-pfdvb2baofgnu9vvv2mmtu1r79r5a2dk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
