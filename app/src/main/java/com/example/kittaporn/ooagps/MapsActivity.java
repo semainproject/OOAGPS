@@ -166,20 +166,26 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.setLatLngBoundsForCameraTarget(ADELAIDE);
         mMap.setMinZoomPreference(16.0f);
         mMap.setMaxZoomPreference(20.0f);
+        /*
+        ////// Drawing poly lines section begin  ////////////
+        */
         PolyLineData poly = new PolyLineData();
-        List<LatLng> list = poly.getData();
-        PolylineOptions options = new PolylineOptions().width(12).color(Color.RED).geodesic(true);
+        List<LatLng> list = poly.getData();//get position list to draw lines
+        PolylineOptions options = new PolylineOptions().width(12).color(Color.RED).geodesic(true);// setting line option
         Bitmap markerBitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.ic_flag1);
         markerBitmap = scaleBitmap(markerBitmap, 90, 90);
         mMap.addMarker(new MarkerOptions().position(new LatLng(13.119123, 100.919836)).title("อาคาร 17").icon(BitmapDescriptorFactory.fromBitmap(markerBitmap)));
         mMap.addMarker(new MarkerOptions().position(new LatLng(13.118419, 100.920354)).title("อาคาร 10").icon(BitmapDescriptorFactory.fromBitmap(markerBitmap)));
         mMap.addMarker(new MarkerOptions().position(new LatLng(13.117604, 100.920950)).title("โรงอาหาร").icon(BitmapDescriptorFactory.fromBitmap(markerBitmap)));
         mMap.addMarker(new MarkerOptions().position(new LatLng(13.116648, 100.921564)).title("หอใน").icon(BitmapDescriptorFactory.fromBitmap(markerBitmap)));
-        for (int z = 0; z < list.size(); z++) {
+        for (int z = 0; z < list.size(); z++) { //fetch each position from  PolyLineData list
             LatLng point = list.get(z);
             options.add(point);
         }
         Polyline line = mMap.addPolyline(options);
+        /*
+        ////// Drawing poly lines section END  ////////////
+        */
         db.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
